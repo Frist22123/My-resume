@@ -1,0 +1,1374 @@
+
+/* =========================
+   1. ตั้งค่าพื้นฐาน
+========================= */
+
+:root {
+    --blue: #d9f1ff;
+    --pink: #f7b7cd;
+    --red: #d9586b;
+    --dark-red: #b83d55;
+    --dark-blue: #254f70;
+    --white: #ffffff;
+    --text: #49677a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: "Leelawadee UI", "Noto Sans Thai",
+                 "Segoe UI", sans-serif;
+    background-color: var(--blue);
+    color: var(--dark-blue);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.8;
+}
+
+
+/* =========================
+   2. Navbar สีแดง
+========================= */
+
+.navbar-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--red);
+    box-shadow: 0 4px 15px rgba(120, 30, 50, 0.15);
+}
+
+.nav-container {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo:hover {
+    color: white;
+}
+
+.logo span {
+    color: #ffe1eb;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffe4ed;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   3. Home
+========================= */
+
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 130px 0 90px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(221, 243, 255, 0.97),
+            rgba(221, 243, 255, 0.72),
+            rgba(221, 243, 255, 0.18)
+        ),
+        url("assets/japan-landscape.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.small-heading {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--dark-red);
+    font-weight: bold;
+}
+
+.hello-text {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.home-content h1 {
+    font-size: clamp(48px, 6vw, 85px);
+    font-weight: bold;
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.home-content h1 span {
+    color: var(--red);
+}
+
+.home-content h2 {
+    font-size: 22px;
+    color: var(--dark-red);
+}
+
+.english-name {
+    font-size: 15px;
+    color: var(--text);
+}
+
+.home-major {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.pim-link {
+    color: var(--dark-red);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.home-description {
+    max-width: 520px;
+    margin: 25px 0;
+    padding: 18px;
+    background-color: rgba(255, 250, 253, 0.8);
+    border-left: 4px solid var(--red);
+    border-radius: 0 15px 15px 0;
+}
+
+.pink-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: var(--red);
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.pink-button:hover {
+    background-color: var(--dark-red);
+    color: white;
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   4. Profile
+========================= */
+
+.profile-area {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle {
+    width: 350px;
+    height: 350px;
+    padding: 12px;
+    border: 5px solid white;
+    border-radius: 50%;
+    background-color: #e4f3ff;
+    box-shadow: 0 20px 50px rgba(60, 100, 140, 0.2);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-japanese {
+    position: absolute;
+    top: 0;
+    right: 0;
+    writing-mode: vertical-rl;
+    letter-spacing: 6px;
+    color: var(--dark-red);
+}
+
+.home-mel {
+    position: absolute;
+    width: 145px;
+    right: 0;
+    bottom: 0;
+    filter: drop-shadow(0 10px 15px #658eaa55);
+}
+
+
+/* =========================
+   5. Section ทั่วไป
+========================= */
+
+.page-section {
+    position: relative;
+    min-height: 85vh;
+    padding: 110px 0;
+    overflow: hidden;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--dark-red);
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: bold;
+}
+
+.section-title span {
+    color: var(--red);
+}
+
+.section-description {
+    color: var(--text);
+    margin-top: 15px;
+}
+
+.paper-tag {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-bottom: 20px;
+    background-color: #ffe1ec;
+    color: var(--dark-red);
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* =========================
+   6. About
+========================= */
+
+.about-section {
+    background: linear-gradient(
+        135deg,
+        #ddf3ff,
+        #fceaf1
+    );
+}
+
+.about-paper {
+    padding: 40px;
+    background-color: #fffafd;
+    border: 1px solid #edc5d3;
+    border-radius: 8px 30px 8px 30px;
+    box-shadow: 8px 10px 0 #eab8ca55;
+}
+
+.about-paper h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.about-paper p {
+    color: var(--text);
+}
+
+.about-paper hr {
+    margin: 25px 0;
+    border-color: #e9b2c4;
+}
+
+.about-paper h4 {
+    font-size: 15px;
+    color: var(--dark-red);
+    font-weight: bold;
+}
+
+
+/* รูป About */
+
+.about-image-box {
+    position: relative;
+    max-width: 450px;
+    margin: auto;
+    padding: 12px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px #6b9bb333;
+    transform: rotate(2deg);
+}
+
+.about-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.image-sticker {
+    position: absolute;
+    bottom: -18px;
+    right: -10px;
+    padding: 12px 22px;
+    background-color: var(--red);
+    color: white;
+    border-radius: 25px;
+    transform: rotate(-6deg);
+    font-weight: bold;
+}
+
+
+/* =========================
+   7. Education
+========================= */
+
+.education-section {
+    background: linear-gradient(
+        135deg,
+        #cdeeff,
+        #e9f6ff
+    );
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.65),
+            rgba(255,255,255,0.65)
+        ),
+        url("assets/สาวน้อยชมซากุระจากหน้าต่างรถไฟ.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.education-picture {
+    max-width: 380px;
+    margin: auto;
+    padding: 15px 15px 0;
+    background-color: white;
+    box-shadow: 0 15px 40px #477b9b33;
+    transform: rotate(-4deg);
+}
+
+.education-picture img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+.education-picture p {
+    padding: 20px 0;
+    text-align: center;
+    color: var(--dark-red);
+    font-weight: bold;
+    margin: 0;
+}
+
+.education-card {
+    padding: 40px;
+    background-color: #fffafd;
+    border: 1px solid #edc4d4;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px #598ca522;
+}
+
+.education-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.school-english {
+    color: var(--text);
+}
+
+.education-card p {
+    color: var(--text);
+}
+
+.education-card a {
+    color: var(--dark-red);
+    font-weight: bold;
+}
+
+
+/* =========================
+   8. Experience
+========================= */
+
+.experience-section {
+    background: linear-gradient(
+        135deg,
+        #e8f5ff,
+        #fcebf3
+    );
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.65),
+            rgba(255,255,255,0.65)
+        ),
+        url("assets/สาวน้อยยูกาตะกับแอปเปิลเชื่อม.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ใช้ภาพใหม่เป็นแบนเนอร์ */
+
+.experience-banner {
+    min-height: 290px;
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    margin-top: 35px;
+    border-radius: 25px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(30, 70, 100, 0.88),
+            rgba(30, 70, 100, 0.3)
+        ),
+        url("assets/Mel travel.png");
+
+    background-size: cover;
+    background-position: center 45%;
+}
+
+.experience-banner-text {
+    color: white;
+}
+
+.experience-banner-text span {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.experience-banner-text h3 {
+    font-size: 35px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.experience-banner-text p {
+    color: #ffe0ed;
+}
+
+.experience-card {
+    height: 100%;
+    padding: 35px;
+    background-color: #fffafd;
+    border: 1px solid #eec5d5;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px #668aa51a;
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+}
+
+.experience-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.experience-card p {
+    color: var(--text);
+}
+
+.status-tag {
+    display: inline-block;
+    padding: 7px 16px;
+    margin-top: 15px;
+    background-color: #ffe1ec;
+    color: var(--dark-red);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px;
+    border-radius: 25px;
+    background: linear-gradient(
+        120deg,
+        #286f9c,
+        #d9586b
+    );
+    color: white;
+}
+
+.project-card p {
+    color: #f4faff;
+}
+
+.project-card a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.project-mel {
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.experience-note {
+    margin-top: 25px;
+    font-size: 13px;
+    color: var(--text);
+}
+
+
+/* =========================
+   9. Skills
+========================= */
+
+.skills-section {
+    background: linear-gradient(
+        135deg,
+        #d8f1ff,
+        #f6eaf4
+    );
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.65),
+            rgba(255,255,255,0.65)
+        ),
+        url("assets/สาวมิโกะอธิษฐานใต้แสงซากุระ.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ใช้รูปใหม่ด้านบนของ Skills */
+
+.skills-banner {
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    padding: 35px;
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 246, 251, 0.95),
+            rgba(255, 246, 251, 0.55),
+            rgba(255, 246, 251, 0.08)
+        ),
+        url("assets/Mel watching.png");
+
+    background-size: cover;
+    background-position: center 65%;
+}
+
+.skills-banner-content p {
+    color: var(--dark-red);
+    font-weight: bold;
+}
+
+.skills-banner-content h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+.skill-card {
+    position: relative;
+    height: 100%;
+    min-height: 270px;
+    padding: 30px;
+    text-align: center;
+    background-color: #fffafd;
+    border: 1px solid #eab8cb;
+    border-radius: 40px 40px 15px 15px;
+    box-shadow: 5px 7px 0 #d9586b22;
+    transition: 0.3s;
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 9px);
+    width: 18px;
+    height: 25px;
+    border: 2px solid #e9a9c0;
+    border-radius: 50%;
+    background-color: #fce5ed;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+}
+
+.skill-icon {
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 10px auto 25px;
+    border-radius: 50%;
+    background-color: #ffe6ee;
+    color: var(--dark-red);
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.skill-card h3 {
+    font-size: 22px;
+}
+
+.skill-card p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.skill-stars {
+    margin: 20px 0 10px;
+    color: var(--red);
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.skill-card span {
+    color: var(--text);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* =========================
+   10. Contact
+========================= */
+
+.contact-section {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(221, 243, 255, 0.96),
+            rgba(255, 235, 244, 0.88)
+        ),
+        url("assets/japan-landscape.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-intro h3 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.contact-intro p {
+    color: var(--text);
+}
+
+.japanese-text {
+    font-size: 30px;
+    color: var(--dark-red) !important;
+}
+
+.contact-mel {
+    width: 180px;
+    filter: drop-shadow(0 10px 15px #537d9a55);
+}
+
+.contact-paper {
+    padding: 40px;
+    background-color: #fffafd;
+    border: 1px solid #eec4d4;
+    border-radius: 8px 30px 8px 30px;
+    box-shadow: 8px 10px 0 #d9586b22;
+}
+
+.contact-paper h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.contact-list {
+    padding-left: 25px;
+}
+
+.contact-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eed9e2;
+}
+
+.contact-list strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-red);
+    font-size: 13px;
+}
+
+.contact-list span {
+    color: var(--text);
+}
+
+.contact-list a {
+    color: var(--dark-blue);
+    overflow-wrap: anywhere;
+}
+
+.email-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+}
+
+.at-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-signature {
+    margin-top: 25px;
+    text-align: right;
+    color: var(--dark-red);
+    font-style: italic;
+}
+
+/* =========================
+   Contact - Japanese Harbor
+========================= */
+
+.contact-section {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(221, 243, 255, 0.85),
+            rgba(255, 235, 244, 0.55)
+        ),
+        url("assets/sleeping.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* การ์ดข้อมูลติดต่อ */
+.contact-paper {
+    background-color: rgba(255, 250, 253, 0.9);
+    backdrop-filter: blur(10px);
+
+    border: 2px solid #f7b7cd;
+    border-radius: 25px;
+
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(80, 50, 80, 0.15);
+}
+
+/* มือถือ */
+@media (max-width: 767px) {
+    .contact-section {
+        background-attachment: scroll;
+        background-position: 40% center;
+    }
+
+    .contact-paper {
+        padding: 25px;
+    }
+}
+
+
+/* =========================
+   11. Footer
+========================= */
+
+.footer {
+    padding: 30px;
+    text-align: center;
+    background-color: var(--dark-red);
+    color: white;
+}
+
+.footer p {
+    margin: 5px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   12. Responsive
+========================= */
+
+@media (max-width: 991px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: var(--dark-red);
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .home-content {
+        text-align: center;
+    }
+
+    .home-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-area {
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .home-section {
+        padding: 120px 0 75px;
+    }
+
+    .home-content h1 {
+        font-size: 47px;
+    }
+
+    .home-content h2 {
+        font-size: 19px;
+    }
+
+    .profile-area {
+        min-height: 320px;
+    }
+
+    .profile-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .home-mel {
+        width: 100px;
+    }
+
+    .page-section {
+        padding: 75px 0;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .about-paper,
+    .education-card,
+    .experience-card,
+    .contact-paper {
+        padding: 25px;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+    .education-picture img {
+        height: 280px;
+    }
+
+    .experience-banner,
+    .skills-banner {
+        min-height: 220px;
+        padding: 25px;
+    }
+
+    .experience-banner-text h3 {
+        font-size: 27px;
+    }
+
+    .skills-banner-content h3 {
+        font-size: 24px;
+    }
+
+    .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    .project-mel {
+        align-self: center;
+        width: 120px;
+    }
+
+    .contact-intro {
+        text-align: center;
+    }
+
+    .skill-card {
+        min-height: 250px;
+    }
+
+}
+
+
+/* =========================
+   13. Animation
+========================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+    @supports (animation-timeline: view()) {
+
+        .reveal {
+            animation-name: fadeUp;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 25%;
+        }
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        animation: none;
+    }
+
+}
+
+/* =========================
+   พื้นหลัง About ถึง Skills
+   ใช้รูปเดียวกันทุก Section
+========================= */
+.about-section
+ {
+    background-image:
+        linear-gradient(
+            rgba(221, 243, 255, 0.72),
+            rgba(255, 235, 244, 0.72)
+        ),
+        url("assets/sakura-study.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ทำให้เนื้อหาอยู่เหนือพื้นหลัง */
+.home-section .container,
+.about-section .container,
+.education-section .container,
+.experience-section .container,
+.skills-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* การ์ดโปร่งแสงเล็กน้อย */
+.home-section,
+.about-paper,
+.education-card,
+.experience-card,
+.skill-card {
+    background-color: rgba(255, 250, 253, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+/* มือถือไม่ใช้ fixed เพื่อให้เลื่อนลื่น */
+@media (max-width: 767px) {
+  .home-section,
+    .about-section,
+    .education-section,
+    .experience-section,
+    .skills-section {
+        background-attachment: scroll;
+        background-position: center;
+    }
+}
+
+/* ทำให้แต่ละ Section เชื่อมกันนุ่มขึ้น */
+.home-section,
+.about-section,
+.education-section,
+.experience-section,
+.skills-section,
+.contact-section {
+    position: relative;
+    isolation: isolate;
+}
+
+/* ไล่สีที่ขอบล่างของแต่ละ Section */
+.home-section::after,
+.about-section::after,
+.education-section::after,
+.experience-section::after,
+.skills-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 160px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(221, 243, 255, 0.55) 45%,
+        rgba(221, 243, 255, 0.95) 100%
+    );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ไล่สีที่ขอบบนของ Section ถัดไป */
+.home-section::before,
+.education-section::before,
+.experience-section::before,
+.skills-section::before,
+.contact-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 160px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(221, 243, 255, 0.95) 0%,
+        rgba(221, 243, 255, 0.55) 55%,
+        transparent 100%
+    );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* เนื้อหาต้องอยู่เหนือชั้นไล่สี */
+.page-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ตัวหนังสือญี่ปุ่นบนภาพ */
+
+.profile-area {
+    position: relative;
+}
+
+.japanese-text-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+}
+
+/* ตัวหนังสือเรียงแนวตั้ง */
+.japanese-vertical {
+    display: block;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+
+    color: #d9586b;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 8px;
+
+    text-shadow: 1px 1px 3px white;
+}
+
+/* ตัวหนังสือด้านล่าง */
+.japanese-bottom {
+    display: block;
+    margin-top: 20px;
+
+    color: #254f70;
+    font-size: 15px;
+    font-weight: bold;
+
+    text-shadow: 1px 1px 3px white;
+}
+
+.japanese-text {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+
+    color: #d9586b;
+    font-size: 18px;
+    letter-spacing: 8px;
+}
+
+.japanese-text p {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0;
+}
+
+/* เว้นด้านบนเฉพาะคอลัมน์ที่ 2 */
+.japanese-text p:nth-child(2) {
+    margin-top: 40px;
+}
+
+/* Navbar hover */
+.nav-menu a {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* ขีดเส้นใต้ เริ่มจากตรงกลาง */
+.nav-menu a:not(.contact-nav)::after {
+    content: "";
+    position: absolute;
+
+    bottom: -5px;
+    left: 50%;
+
+    width: 0;
+    height: 3px;
+
+    background: #ffe0ea;
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+/* ชี้เมาส์แล้วขีดขยาย */
+.nav-menu a:not(.contact-nav):hover::after {
+    width: 100%;
+    left: 0;
+    
+}
+
+/* รูปเมลโผล่เหนือเมนู */
+.nav-menu a:not(.contact-nav)::before {
+    content: "";
+
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+
+    width: 65px;
+    height: 65px;
+
+    background-image: url("assets/mel-smile.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transform: translate(-50%, 15px) scale(0.7);
+    transition: 0.3s ease;
+
+    pointer-events: none;
+}
+
+/* ชี้แล้วเมลเด้งขึ้น */
+.nav-menu a:not(.contact-nav):hover::before {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+}
+
+/* ป้องกันรูปเมลถูกตัด */
+.navbar-area,
+.nav-container,
+.nav-menu {
+    overflow: visible;
+}
+
+/* สีข้อความตอน Hover */
+.nav-menu a:hover {
+    color: #ffe0ea;
+}
+
+.nav-menu a[href="#home"]::before {
+    background-image: url("assets/เมลร่างแดง.png");
+}
+
+.nav-menu a[href="#about"]::before {
+    background-image: url("assets/เมลร่างแดง.png");
+}
+
+.nav-menu a[href="#experience"]::before {
+    background-image: url("assets/เมลร่างแดง.png");
+}
+
+/* โลโก้มุมซ้ายบน */
+.navbar-area .logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* ดอกไม้หมุนช้า ๆ */
+.logo-flower {
+    display: inline-block;
+    color: #ffe1eb;
+    animation: flowerSpin 8s linear infinite;
+}
+
+@keyframes flowerSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* เส้นใต้โลโก้ */
+.navbar-area .logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #ffe1eb;
+    transition: width 0.4s ease;
+}
+
+/* ข้อความญี่ปุ่น */
+.logo-message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 12px;
+    white-space: nowrap;
+
+    background: white;
+    color: #d9586b;
+    padding: 7px 13px;
+    border-radius: 15px;
+    font-size: 12px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+/* ตอนชี้โลโก้ */
+.navbar-area .logo:hover {
+    transform: scale(1.06);
+}
+
+.navbar-area .logo:hover::after {
+    width: 100%;
+}
+
+.navbar-area .logo:hover .logo-message {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ตอนใช้คีย์บอร์ด */
+.navbar-area .logo:focus-visible .logo-message {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ลดการเคลื่อนไหวตามการตั้งค่าเครื่อง */
+@media (prefers-reduced-motion: reduce) {
+    .logo-flower {
+        animation: none;
+    }
+}
